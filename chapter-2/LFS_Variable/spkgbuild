@@ -1,0 +1,14 @@
+# description : set LFS variable
+# depends :
+
+name=lfs_variable
+version=8.4
+version=1
+
+build()
+{
+cat <<EOF >> ~/.bashrc 
+export LFS=/mnt/lfs
+EOF
+source ~/.bashrc
+}
