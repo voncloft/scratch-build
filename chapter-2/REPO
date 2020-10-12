@@ -1,6 +1,0 @@
-d:LFS_Variable
-d:file-systems
-d:host-reqs
-f:23dc19e9a2cccf05e1d2faff783e87df:LFS_Variable/spkgbuild
-f:62864c8833919a4b28922a0def979461:file-systems/spkgbuild
-f:5383bc3095af87e935ac4ba969fbf4d4:host-reqs/spkgbuild

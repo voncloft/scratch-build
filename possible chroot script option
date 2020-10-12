@@ -1,8 +1,0 @@
-sudo chroot /mnt/root /bin/sh << EOF
-update-initramfs -u
-grub-install --recheck /dev/sda
-grub-install --recheck /dev/sdb
-update-grub
-EOF
-
-Under EOF run the scripts for chapter 6 one by one as sh files
