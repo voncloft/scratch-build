@@ -1,2 +1,2 @@
 use scratchpkg for chapter 5 and chapter 6
-
+model after: /media/Documents/lfs/book/8.4-32bit
