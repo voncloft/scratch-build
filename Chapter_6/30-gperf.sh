@@ -1,5 +1,5 @@
-name=
-version=
+name=gperf
+version=3.1
 
 mkdir -pv /var/lib/scratchpkg/index/$name
 checkfile=/var/lib/scratchpkg/index/$name/.pkginfo
@@ -8,6 +8,9 @@ if [ ! -f $checkfile ];
 then
 tar xvf $name-$version.tar.xz
 cd $name-$version
+./configure --prefix=/usr --docdir=/usr/share/doc/gperf-$version
+make
+make install
 
 rm -rvf $name-$version
 

@@ -1,5 +1,5 @@
-name=
-version=
+name=intltool
+version=0.51.0
 
 mkdir -pv /var/lib/scratchpkg/index/$name
 checkfile=/var/lib/scratchpkg/index/$name/.pkginfo
@@ -8,7 +8,11 @@ if [ ! -f $checkfile ];
 then
 tar xvf $name-$version.tar.xz
 cd $name-$version
-
+sed -i 's:\\\${:\\\$\\{:' intltool-update.in
+./configure --prefix=/usr
+make
+make install
+install -v -Dm644 doc/I18N-HOWTO /usr/share/doc/intltool-$version/I18N-HOWTO
 rm -rvf $name-$version
 
 #add record to system install library

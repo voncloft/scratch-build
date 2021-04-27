@@ -17,4 +17,9 @@ rm -rvf $name-$version
 echo "name=$name" >> $checkfile
 echo "version=$version" >> $checkfile
 echo "release=1" >> $checkfile
+
+
+else
+        echo "$name - Already installed - skipping"
+
 fi

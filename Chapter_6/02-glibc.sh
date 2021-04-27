@@ -124,4 +124,7 @@ echo "/usr/lib32" > /etc/ld.so.conf.d/lib32.conf
 echo "name=$name" >> $checkfile
 echo "version=$version" >> $checkfile
 echo "release=1" >> $checkfile
+else
+        echo "$name - Already installed - skipping"
+
 fi
