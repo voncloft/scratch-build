@@ -53,3 +53,4 @@ for f in Chapter_5/*;
 do
 	sh $f
 done
+chown -R root:root $LFS/tools
