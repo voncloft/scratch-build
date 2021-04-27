@@ -5,7 +5,7 @@ checkfile=/logs/$step-$name-$version
 
 if [ ! -f $checkfile ];
 then
-tar xvf $name-$version.tar.xz
+tar xvf $name-$version.*.*
 cd $name-$version
 sed -i 's/IO_ftrylockfile/IO_EOF_SEEN/' gl/lib/*.c
 sed -i '/unistd/a #include <sys/sysmacros.h>' gl/lib/mountlist.c

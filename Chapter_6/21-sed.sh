@@ -6,7 +6,7 @@ checkfile=/var/lib/scratchpkg/index/$name/.pkginfo
 
 if [ ! -f $checkfile ];
 then
-tar xvf $name-$version.tar.xz
+tar xvf $name-$version.*.*
 cd $name-$version
 sed -i 's/usr/tools/'                 build-aux/help2man
 sed -i 's/testsuite.panic-tests.sh//' Makefile.in

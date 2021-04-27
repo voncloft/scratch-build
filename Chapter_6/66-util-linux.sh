@@ -6,7 +6,7 @@ checkfile=/var/lib/scratchpkg/index/$name/.pkginfo
 
 if [ ! -f $checkfile ];
 then
-tar xvf $name-$version.tar.xz
+tar xvf $name-$version.*.*
 cd $name-$version
 mkdir -pv /var/lib/hwclock
 rm -vf /usr/include/{blkid,libmount,uuid}

@@ -6,7 +6,7 @@ checkfile=/var/lib/scratchpkg/index/$name/.pkginfo
 
 if [ ! -f $checkfile ];
 then
-tar xvf $name-$version.tar.xz
+tar xvf $name-$version.*.*
 cd $name-$version
 patch -Np1 -i ../coreutils-$version-i18n-1.patch
 sed -i '/test.lock/s/^/#/' gnulib-tests/gnulib.mk

@@ -6,7 +6,7 @@ checkfile=/var/lib/scratchpkg/index/$name/.pkginfo
 
 if [ ! -f $checkfile ];
 then
-tar xvf $name-$version.tar.xz
+tar xvf $name-$version.*.*
 cd $name-$version
 echo "127.0.0.1 localhost $(hostname)" > /etc/hosts
 export BUILD_ZLIB=False

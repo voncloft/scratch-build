@@ -10,12 +10,12 @@ checkfile=/logs/$step-$name-$version
 
 if [ ! -f $checkfile ];
 then
-tar xvf $name-$version.tar.xz
+tar xvf $name-$version.*.*
 cd $name-$version
 
-tar -xf ../mpfr-$mpfr.tar.xz
+tar -xf ../mpfr-$mpfr.*.*
 mv -v mpfr-$mpfr mpfr
-tar -xf ../gmp-$gmp.tar.xz
+tar -xf ../gmp-$gmp.*.*
 mv -v gmp-$gmp gmp
 tar -xf ../mpc-$mpc.tar.gz
 mv -v mpc-$mpc mpc'

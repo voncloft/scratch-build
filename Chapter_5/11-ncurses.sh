@@ -5,7 +5,7 @@ checkfile=/logs/$step-$name-$version
 
 if [ ! -f $checkfile ];
 then
-tar xvf $name-$version.tar.xz
+tar xvf $name-$version.*.*
 cd $name-$version
 	sed -i s/mawk// configure
 	./configure --prefix=/tools \

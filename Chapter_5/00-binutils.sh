@@ -5,7 +5,7 @@ checkfile=/logs/$step-$name-$version
 
 if [ ! -f $checkfile ];
 then
-tar $name-$version.tar.xz
+tar $name-$version.*.*
 cd $name-$version
 
 mkdir -v build

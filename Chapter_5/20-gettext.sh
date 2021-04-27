@@ -5,7 +5,7 @@ checkfile=/logs/$step-$name-$version
 
 if [ ! -f $checkfile ];
 then
-tar xvf $name-$version.tar.xz
+tar xvf $name-$version.*.*
 cd $name-$version
 cd gettext-tools
 EMACS="no" ./configure --prefix=/tools --disable-shared

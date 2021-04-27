@@ -6,7 +6,7 @@ checkfile=/var/lib/scratchpkg/index/$name/.pkginfo
 
 if [ ! -f $checkfile ];
 then
-tar xvf $name-$version.tar.xz
+tar xvf $name-$version.*.*
 cd $name-$version
 sed -i '/Error loading kernel symbols/{n;n;d}' ksym_mod.c
 sed -i 's/union wait/int/' syslogd.c

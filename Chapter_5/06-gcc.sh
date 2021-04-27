@@ -7,7 +7,7 @@ gmp=6.2.1
 mpc=1.2.1
 if [ ! -f $checkfile ];
 then
-tar xvf $name-$version.tar.xz
+tar xvf $name-$version.*.*
 cd $name-$version
 	cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \
   	`dirname $($LFS_TGT-gcc -print-libgcc-file-name)`/include-fixed/limits.h
@@ -27,9 +27,9 @@ cd $name-$version
 	sed -i -e '/MULTILIB_OSDIRNAMES/d' gcc/config/i386/t-linux64
 	echo "MULTILIB_OSDIRNAMES = m64=../lib m32=../lib32 mx32=../libx32" >> gcc/config/i386/t-linux64
 
-tar -xf ../mpfr-$mpfr.tar.xz
-mv -v mpfr-$mpfr.tar.xz mpfr
-tar -xf ../gmp-$gmp.tar.xz
+tar -xf ../mpfr-$mpfr.*.*
+mv -v mpfr-$mpfr.*.* mpfr
+tar -xf ../gmp-$gmp.*.*
 mv -v gmp-$gmp gmp
 tar -xf ../mpc-$mpc.tar.gz
 mv -v mpc-$mpc mpc

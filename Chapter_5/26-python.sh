@@ -5,7 +5,7 @@ checkfile=/logs/$step-$name-$version
 
 if [ ! -f $checkfile ];
 then
-tar xvf $name-$version.tar.xz
+tar xvf $name-$version.*.*
 cd $name-$version
 sed -i '/def add_multiarch_paths/a \        return' setup.py
 ./configure --prefix=/tools --without-ensurepip

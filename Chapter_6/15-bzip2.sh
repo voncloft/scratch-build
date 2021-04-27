@@ -6,7 +6,7 @@ checkfile=/var/lib/scratchpkg/index/$name/.pkginfo
 
 if [ ! -f $checkfile ];
 then
-tar xvf $name-$version.tar.xz
+tar xvf $name-$version.*.*
 cd $name-$version
 patch -Np1 -i ../bzip2-1.0.6-install_docs-1.patch
 sed -i 's@\(ln -s -f \)$(PREFIX)/bin/@\1@' Makefile
