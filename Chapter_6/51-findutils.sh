@@ -6,6 +6,7 @@ checkfile=/var/lib/scratchpkg/index/$name/.pkginfo
 
 if [ ! -f $checkfile ];
 then
+cd /sources
 tar xvf $name-$version.*.*
 cd $name-$version
 sed -i 's/test-lock..EXEEXT.//' tests/Makefile.in

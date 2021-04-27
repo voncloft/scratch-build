@@ -6,6 +6,7 @@ checkfile=/var/lib/scratchpkg/index/$name/.pkginfo
 
 if [ ! -f $checkfile ];
 then
+cd /sources
 tar xvf $name-$version.*.*
 cd $name-$version
 patch -Np1 -i ../coreutils-$version-i18n-1.patch

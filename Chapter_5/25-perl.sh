@@ -5,6 +5,7 @@ checkfile=/logs/$step-$name-$version
 
 if [ ! -f $checkfile ];
 then
+cd /mnt/lfs/sources
 tar xvf $name-$version.*.*
 cd $name-$version
 sh Configure -des -Dprefix=/tools -Dlibs=-lm -Uloclibpth -Ulocincpth

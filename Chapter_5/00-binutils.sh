@@ -5,6 +5,9 @@ checkfile=/logs/$step-$name-$version
 
 if [ ! -f $checkfile ];
 then
+cd /mnt/lfs/sources
+cd /mnt/lfs/sources
+cd /mnt/lfs/sources
 tar $name-$version.*.*
 cd $name-$version
 

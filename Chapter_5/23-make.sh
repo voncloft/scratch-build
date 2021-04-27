@@ -5,6 +5,7 @@ checkfile=/logs/$step-$name-$version
 
 if [ ! -f $checkfile ];
 then
+cd /mnt/lfs/sources
 tar xvf $name-$version.*.*
 cd $name-$version
 sed -i '211,217 d; 219,229 d; 232 d' glob/glob.c

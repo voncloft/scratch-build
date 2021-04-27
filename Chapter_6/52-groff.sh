@@ -6,6 +6,7 @@ checkfile=/var/lib/scratchpkg/index/$name/.pkginfo
 
 if [ ! -f $checkfile ];
 then
+cd /sources
 tar xvf $name-$version.*.*
 cd $name-$version
 PAGE=letter ./configure --prefix=/usr

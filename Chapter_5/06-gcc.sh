@@ -7,6 +7,7 @@ gmp=6.2.1
 mpc=1.2.1
 if [ ! -f $checkfile ];
 then
+cd /mnt/lfs/sources
 tar xvf $name-$version.*.*
 cd $name-$version
 	cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \
