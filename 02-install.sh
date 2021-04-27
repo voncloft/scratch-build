@@ -89,3 +89,6 @@ do
 	sh $f
 done
 
+echo "Please type exit"
+echo "Please login using the following command: chroot "$LFS" /usr/bin/env -i          \ HOME=/root TERM="$TERM"  PS1='(lfs chroot) \u:\w\$ '     \ PATH=/bin:/usr/bin:/sbin:/usr/sbin \   /bin/bash --login"
+
