@@ -1,5 +1,8 @@
 NEEDS TESTING - HAVE NOT DONE YET - I am definately sure there are errors to this script
 
+I used the 8.4 lfs layout to install packages while using the most up to date packages of of 4/27/21
+
+
 How to use this script:
 
 scripts/version-check.sh: used to check host OS
