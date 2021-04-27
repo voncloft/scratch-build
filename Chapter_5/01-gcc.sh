@@ -1,12 +1,15 @@
 name=gcc
 version=10.2.0
-
+step=01
 
 mpfr=4.1.0
 gmp=6.2.1
 mpc=1.2.1
+checkfile=/logs/$step-$name-$version
 
-tar xvf $name-$version
+if [ ! -f $checkfile ];
+then
+tar xvf $name-$version.tar.xz
 cd $name-$version
 
 tar -xf ../mpfr-$mpfr.tar.xz
@@ -66,3 +69,7 @@ cd ..
 cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \
   `dirname $($LFS_TGT-gcc -print-libgcc-file-name)`/install-tools/include/limits.h
 rm -vf $name-$version
+touch $checkfile
+
+
+fi

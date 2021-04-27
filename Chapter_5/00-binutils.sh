@@ -1,6 +1,10 @@
 name=binutils
 version=2.36.1
+step=00
+checkfile=/logs/$step-$name-$version
 
+if [ ! -f $checkfile ];
+then
 tar $name-$version.tar.xz
 cd $name-$version
 
@@ -20,3 +24,5 @@ case $(uname -m) in
 esac
 make install
 rm -rfv $name-$version
+touch $checkfile
+fi

@@ -1,7 +1,10 @@
 name=glibc
 version=2.33
-
-tar xvf $name-$version
+step=03
+checkfile=/logs/$step-$name-$version
+if [ ! -f $checkfile ];
+then
+tar xvf $name-$version.tar.xz
 cd $name-$version
 
 mkdir -v build32
@@ -36,3 +39,5 @@ cd       build
 make
 make install
 rm -rvf $name-$version
+touch $checkfile
+fi

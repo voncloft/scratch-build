@@ -46,6 +46,8 @@ export LFS LC_ALL LFS_TGT PATH
 EOF
 source ~/.bash_profile
 
+mkdir -pv /logs
+
 cd $LFS/sources
 for f in Chapter_5/*;
 do
