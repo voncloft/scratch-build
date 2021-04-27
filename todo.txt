@@ -1,2 +1,8 @@
-use scratchpkg for chapter 5 and chapter 6
-model after: /media/Documents/lfs/book/8.4-32bit
+chaper6
+in the following order at the end
+libtasn
+p11-kit
+make-ca
+wget
+git
+httpup
