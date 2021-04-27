@@ -2,7 +2,7 @@ name=gcc
 version=10.2.0
 step=06
 checkfile=/logs/$step-$name-$version
-mpfr=4.1
+mpfr=4.1.0
 gmp=6.2.1
 mpc=1.2.1
 if [ ! -f $checkfile ];
@@ -24,6 +24,7 @@ cd $name-$version
 	#define STANDARD_STARTFILE_PREFIX_1 "/tools/lib/"
 	#define STANDARD_STARTFILE_PREFIX_2 ""' >> $file
   	touch $file.orig
+	done
 	sed -i -e 's@/lib/ld-linux.so.2@/lib32/ld-linux.so.2@g' gcc/config/i386/linux64.h
 	sed -i -e '/MULTILIB_OSDIRNAMES/d' gcc/config/i386/t-linux64
 	echo "MULTILIB_OSDIRNAMES = m64=../lib m32=../lib32 mx32=../libx32" >> gcc/config/i386/t-linux64
