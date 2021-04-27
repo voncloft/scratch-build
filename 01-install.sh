@@ -54,3 +54,6 @@ do
 	sh $f
 done
 chown -R root:root $LFS/tools
+echo "Move your folder into /mnt/lfs and start on chaper 6"
+echo "Please chroot into the new environment by executing the following as root"
+echo "chroot "$LFS" /tools/bin/env -i \ HOME=/root \TERM="$TERM" \PS1='(lfs chroot) \u:\w\$ ' \PATH=/bin:/usr/bin:/sbin:/usr/sbin:/tools/bin \ /tools/bin/bash --login +h"
