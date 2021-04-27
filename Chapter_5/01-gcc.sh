@@ -5,6 +5,7 @@ step=01
 mpfr=4.1.0
 gmp=6.2.1
 mpc=1.2.1
+glibc=2.33
 checkfile=/logs/$step-$name-$version
 
 if [ ! -f $checkfile ];
@@ -42,7 +43,7 @@ cd       build
 ../configure                                       \
     --target=$LFS_TGT                              \
     --prefix=/tools                                \
-    --with-glibc-version=2.11                      \
+    --with-glibc-version=$glibc                      \
     --with-sysroot=$LFS                            \
     --with-newlib                                  \
     --without-headers                              \
