@@ -1,3 +1,5 @@
+NEEDS TESTING - HAVE NOT DONE YET - I am definately sure there are errors to this script
+
 How to use this script:
 
 check-versions.sh: used to check host OS
