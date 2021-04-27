@@ -7,6 +7,7 @@ scripts/version-check.sh: used to check host OS
 ./01-install.sh: run as normal user
 
 Copy folder inside /mnt/lfs - cd into it once chrooted
+
 ./02-install.sh: manually chroot into environment as root: 
 chroot "$LFS" /tools/bin/env -i \
     HOME=/root                  \
