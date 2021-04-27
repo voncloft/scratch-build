@@ -10,6 +10,8 @@ Copy folder inside /mnt/lfs - cd into it once chrooted
 
 ./02-install.sh: manually chroot into environment as root: 
 
+LFS=/mnt/lfs
+
 chroot "$LFS" /tools/bin/env -i \
     HOME=/root                  \
     TERM="$TERM"                \
@@ -19,6 +21,8 @@ chroot "$LFS" /tools/bin/env -i \
 
 
 ./03-finishingup.sh: use as root - chroot as follows:
+
+LFS=/mnt/lfs
 
 chroot "$LFS" /usr/bin/env -i          \
     HOME=/root TERM="$TERM"            \
