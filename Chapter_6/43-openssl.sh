@@ -20,7 +20,7 @@ sed -i '/INSTALL_LIBS/s/libcrypto.a libssl.a//' Makefile
 make MANSUFFIX=ssl install
 mv -v /usr/share/doc/openssl /usr/share/doc/openssl-$version
 cp -vfr doc/* /usr/share/doc/openssl-$version
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

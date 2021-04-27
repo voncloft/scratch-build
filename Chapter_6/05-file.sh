@@ -13,7 +13,7 @@ cd $name-$version
 make
 make install
 
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

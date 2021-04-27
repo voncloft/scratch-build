@@ -16,7 +16,7 @@ sed -i 's|usr/bin/env |bin/|' run.sh.in
             make
             make install
             install -v -m644 doc/*.{html,png,css} /usr/share/doc/expat-$version
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

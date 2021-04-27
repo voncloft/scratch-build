@@ -16,7 +16,7 @@ make
 make install
 install -d -m755           /usr/share/doc/sed-$version
 install -m644 doc/sed.html /usr/share/doc/sed-$version
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

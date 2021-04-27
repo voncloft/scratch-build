@@ -12,7 +12,7 @@ make mrproper
 make INSTALL_HDR_PATH=dest headers_install
 cp -rv dest/include/* /tools/include
 
-rm -rvf $name-$version
+rm -rfv /mnt/lfs/sources/$name-$version
 touch $checkfile
 else
         echo "$name - Already installed - skipping"

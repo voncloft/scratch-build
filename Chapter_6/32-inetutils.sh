@@ -21,7 +21,7 @@ cd $name-$version
             make
             make installmv -v /usr/bin/{hostname,ping,ping6,traceroute} /bin
 	    mv -v /usr/bin/ifconfig /sbin
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

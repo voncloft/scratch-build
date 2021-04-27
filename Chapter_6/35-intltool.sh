@@ -14,7 +14,7 @@ sed -i 's:\\\${:\\\$\\{:' intltool-update.in
 make
 make install
 install -v -Dm644 doc/I18N-HOWTO /usr/share/doc/intltool-$version/I18N-HOWTO
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

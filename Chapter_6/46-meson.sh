@@ -13,7 +13,7 @@ python3 setup.py build
 python3 setup.py install --root=dest
 cp -rv dest/* /
 
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

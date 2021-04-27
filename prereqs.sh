@@ -26,6 +26,9 @@ useradd -s /bin/bash -g lfs -m -k /dev/null lfs
 
 ###Find way to passwd lfs
 #passwd lfs
+mkdir -pv /logs
+chown -v lfs /logs
+chmod 777 /logs
 
 chown -v lfs $LFS/tools
 chown -v lfs $LFS/sources

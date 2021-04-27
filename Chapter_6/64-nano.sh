@@ -16,7 +16,7 @@ cd $name-$version
             make
             make install
             install -v -m644 doc/{nano.html,sample.nanorc} /usr/share/doc/nano-$version
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

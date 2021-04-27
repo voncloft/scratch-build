@@ -19,7 +19,7 @@ RANLIB=$LFS_TGT-ranlib         \
     --disable-nls              \
     --disable-werror           \
     --with-lib-path=/tools/lib \
-    --with-sysrootrm -rvf $name-$version
+    --with-sysrootrm -rfv /mnt/lfs/sources/$name-$version
 
 make
 make install

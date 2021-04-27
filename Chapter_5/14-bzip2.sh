@@ -11,7 +11,7 @@ cd $name-$version
 make
 make PREFIX=/tools install
 
-rm -rvf $name-$version
+rm -rfv /mnt/lfs/sources/$name-$version
 touch $checkfile
 else
         echo "$name - Already installed - skipping"

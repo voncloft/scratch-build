@@ -6,9 +6,7 @@ checkfile=/logs/$step-$name-$version
 if [ ! -f $checkfile ];
 then
 cd /mnt/lfs/sources
-cd /mnt/lfs/sources
-cd /mnt/lfs/sources
-tar $name-$version.*.*
+tar xvf $name-$version.*.*
 cd $name-$version
 
 mkdir -v build
@@ -26,7 +24,7 @@ case $(uname -m) in
   x86_64) mkdir -v /tools/lib && ln -sv lib /tools/lib64 ;;
 esac
 make install
-rm -rfv $name-$version
+rm -rfv /mnt/lfs/sources/$name-$version
 touch $checkfile
 else
 	echo "$name - Already installed - skipping"

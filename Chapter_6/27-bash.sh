@@ -17,7 +17,7 @@ cd $name-$version
            make install
 mv -vf /usr/bin/bash /bin
 exec /bin/bash --login +h
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

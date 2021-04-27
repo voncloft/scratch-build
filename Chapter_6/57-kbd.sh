@@ -17,7 +17,7 @@ make
 make install
 mkdir -v       /usr/share/doc/kbd-$version
 cp -R -v docs/doc/* /usr/share/doc/kbd-$version
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

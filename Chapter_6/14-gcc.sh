@@ -35,7 +35,7 @@ SED=sed                               \
         mkdir -pv /usr/share/gdb/auto-load/usr/lib
         mv -v /usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib
         
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

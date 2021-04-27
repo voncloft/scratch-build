@@ -13,10 +13,6 @@ export LFS LC_ALL LFS_TGT PATH
 EOF
 source ~/.bash_profile
 
-mkdir -pv /logs
-chown -R  lfs:lfs /logs
-chmod -R 777 /logs
-
 cd $LFS/sources
 for f in Chapter_5/*;
 do

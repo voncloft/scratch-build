@@ -19,7 +19,7 @@ cd $name-$version
             make install
 ln -s libncursesw.so /tools/lib/libncurses.so
 
-rm -rvf $name-$version
+rm -rfv /mnt/lfs/sources/$name-$version
 touch $checkfile
 else
         echo "$name - Already installed - skipping"

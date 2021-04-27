@@ -15,7 +15,7 @@ cd $name-$version
 	mv -v /usr/lib/libz.so.* /lib
 	ln -sfv ../../lib/$(readlink /usr/lib/libz.so) /usr/lib/libz.so
 
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

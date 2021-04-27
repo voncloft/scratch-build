@@ -40,7 +40,7 @@ cd $name-$version
     --with-gxx-include-dir=/tools/$LFS_TGT/include/c++/$version
     make
     make install
-rm -rvf $name-$version
+rm -rfv /mnt/lfs/sources/$name-$version
 touch $checkfile
 else
         echo "$name - Already installed - skipping"

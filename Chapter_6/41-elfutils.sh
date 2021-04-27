@@ -13,7 +13,7 @@ cd $name-$version
 make
 make -C libelf install
 install -vm644 config/libelf.pc /usr/lib/pkgconfig
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

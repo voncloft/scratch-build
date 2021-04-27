@@ -32,7 +32,7 @@ ln -sfv libncurses.so      /usr/lib/libcurses.so
 mkdir -v       /usr/share/doc/ncurses-$version
 cp -v -R doc/* /usr/share/doc/ncurses-$version
 
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

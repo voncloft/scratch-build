@@ -19,7 +19,7 @@ mv -v mpfr-$mpfr mpfr
 tar -xf ../gmp-$gmp.*.*
 mv -v gmp-$gmp gmp
 tar -xf ../mpc-$mpc.tar.gz
-mv -v mpc-$mpc mpc'
+mv -v mpc-$mpc mpc
 
 for file in gcc/config/{linux,i386/linux{,64}}.h
 do

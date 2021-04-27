@@ -21,7 +21,7 @@ for f in *
   do install-info $f dir 2>/dev/null
 done
 popd
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

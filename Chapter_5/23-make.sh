@@ -12,7 +12,7 @@ sed -i '211,217 d; 219,229 d; 232 d' glob/glob.c
 ./configure --prefix=/tools --without-guile
 make
 make install
-rm -rvf $name-$version
+rm -rfv /mnt/lfs/sources/$name-$version
 touch $checkfile
 else
         echo "$name - Already installed - skipping"

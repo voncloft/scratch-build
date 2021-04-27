@@ -16,7 +16,7 @@ echo "#define _IO_IN_BACKUP 0x100" >> gl/lib/stdio-impl.h
 
 make
 make install
-rm -rvf $name-$version
+rm -rfv /mnt/lfs/sources/$name-$version
 touch $checkfile
 else
         echo "$name - Already installed - skipping"

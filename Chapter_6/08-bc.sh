@@ -29,7 +29,7 @@ sed -i -e '/flex/s/as_fn_error/: ;; # &/' configure
             --infodir=/usr/share/info
 make
 make install
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

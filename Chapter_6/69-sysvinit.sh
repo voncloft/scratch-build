@@ -12,7 +12,7 @@ cd $name-$version
 patch -Np1 -i ../sysvinit-$version-consolidated-1.patch
 make
 make install
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

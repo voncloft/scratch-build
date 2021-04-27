@@ -12,7 +12,7 @@ cd $name-$version
 ./configure --prefix=/usr --bindir=/bin
 make
 make install
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

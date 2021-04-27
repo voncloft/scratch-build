@@ -24,7 +24,7 @@ sh Configure -des -Dprefix=/usr                 \
                   make
                   make install
                   unset BUILD_ZLIB BUILD_BZIP2
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

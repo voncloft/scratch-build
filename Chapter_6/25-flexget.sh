@@ -15,7 +15,7 @@ HELP2MAN=/tools/bin/true \
 make
 make install
 ln -sv flex /usr/bin/lex
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

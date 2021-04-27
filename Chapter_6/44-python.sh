@@ -26,7 +26,7 @@ tar --strip-components=1  \
     --no-same-permissions \
     -C /usr/share/doc/python-$version/html \
     -xvf ../python-$version-docs-html.tar.bz2
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

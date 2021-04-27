@@ -13,7 +13,7 @@ sed -i '211,217 d; 219,229 d; 232 d' glob/glob.c
 ./configure --prefix=/usr
 make
 make install
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

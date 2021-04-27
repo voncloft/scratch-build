@@ -15,7 +15,7 @@ sed -i 's/.m_ipt.o//' tc/Makefile
 make
 make DOCDIR=/usr/share/doc/iproute2-4.20.0 install
 
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

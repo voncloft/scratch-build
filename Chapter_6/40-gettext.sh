@@ -22,7 +22,7 @@ sed -e '/AppData/{N;N;p;s/\.appdata\./.metainfo./}' \
 make
 make install
 chmod -v 0755 /usr/lib/preloadable_libintl.so
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

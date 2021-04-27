@@ -37,7 +37,7 @@ tar -xvf ../udev-lfs-20171102.tar.bz2
 make -f udev-lfs-20171102/Makefile.lfs install
 
 LD_LIBRARY_PATH=/tools/lib udevadm hwdb --update
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

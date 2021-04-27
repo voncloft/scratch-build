@@ -19,7 +19,7 @@ cd $name-$version
             mv -v /usr/lib/libacl.so.* /lib
 	    ln -sfv ../../lib/$(readlink /usr/lib/libacl.so) /usr/lib/libacl.so
             
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

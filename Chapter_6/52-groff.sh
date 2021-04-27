@@ -12,7 +12,7 @@ cd $name-$version
 PAGE=letter ./configure --prefix=/usr
 make -j1
 make install
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

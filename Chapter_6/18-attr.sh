@@ -18,7 +18,7 @@ cd $name-$version
             make install
             mv -v /usr/lib/libattr.so.* /lib
 	ln -sfv ../../lib/$(readlink /usr/lib/libattr.so) /usr/lib/libattr.so
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

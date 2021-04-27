@@ -19,7 +19,7 @@ FORCE_UNSAFE_CONFIGURE=1  \
 make
 make install
 make -C doc install-html docdir=/usr/share/doc/tar-$version
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile

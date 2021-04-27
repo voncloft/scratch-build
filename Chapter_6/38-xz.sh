@@ -17,7 +17,7 @@ cd $name-$version
             mv -v   /usr/bin/{lzma,unlzma,lzcat,xz,unxz,xzcat} /bin
 	mv -v /usr/lib/liblzma.so.* /lib
 	ln -svf ../../lib/$(readlink /usr/lib/liblzma.so) /usr/lib/liblzma.so
-rm -rvf $name-$version
+rm -rfv /sources/$name-$version
 
 #add record to system install library
 echo "name=$name" >> $checkfile
