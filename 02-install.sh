@@ -84,6 +84,7 @@ chgrp -v utmp /var/log/lastlog
 chmod -v 664  /var/log/lastlog
 chmod -v 600  /var/log/btmp
 
+cd /sources/scratch-build/
 for f in Chapter_6/*;
 do
 	sh $f
