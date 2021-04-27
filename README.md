@@ -3,6 +3,7 @@ NEEDS TESTING - HAVE NOT DONE YET - I am definately sure there are errors to thi
 How to use this script:
 
 scripts/version-check.sh: used to check host OS
+
 ./01-install.sh: run as normal user
 
 Copy folder inside /mnt/lfs - cd into it once chrooted
