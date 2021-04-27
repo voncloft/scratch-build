@@ -18,4 +18,7 @@ cp -v src/{msgfmt,msgmerge,xgettext} /tools/bin
 
 rm -rvf $name-$version
 touch $checkfile
+else
+        echo "$name - Already installed - skipping"
+
 fi

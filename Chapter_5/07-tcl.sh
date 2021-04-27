@@ -16,4 +16,7 @@ make install-private-headers
 ln -sv tclsh8.6 /tools/bin/tclsh
 rm -rvf $name-$version
 touch $checkfile
+else
+        echo "$name - Already installed - skipping"
+
 fi

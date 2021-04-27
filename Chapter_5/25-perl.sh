@@ -14,4 +14,7 @@ mkdir -pv /tools/lib/perl5/$version
 cp -Rv lib/* /tools/lib/perl5/$version
 rm -rvf $name-$version
 touch $checkfile
+else
+        echo "$name - Already installed - skipping"
+
 fi

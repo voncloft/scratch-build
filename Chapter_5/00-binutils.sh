@@ -25,4 +25,6 @@ esac
 make install
 rm -rfv $name-$version
 touch $checkfile
+else
+	echo "$name - Already installed - skipping"
 fi

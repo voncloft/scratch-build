@@ -40,4 +40,7 @@ make
 make install
 rm -rvf $name-$version
 touch $checkfile
+else
+        echo "$name - Already installed - skipping"
+
 fi

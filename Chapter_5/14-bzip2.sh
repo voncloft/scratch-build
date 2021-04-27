@@ -12,4 +12,7 @@ make PREFIX=/tools install
 
 rm -rvf $name-$version
 touch $checkfile
+else
+        echo "$name - Already installed - skipping"
+
 fi

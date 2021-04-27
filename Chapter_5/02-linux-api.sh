@@ -13,4 +13,7 @@ cp -rv dest/include/* /tools/include
 
 rm -rvf $name-$version
 touch $checkfile
+else
+        echo "$name - Already installed - skipping"
+
 fi

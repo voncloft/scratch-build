@@ -72,5 +72,7 @@ cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \
 rm -vf $name-$version
 touch $checkfile
 
+else
+        echo "$name - Already installed - skipping"
 
 fi

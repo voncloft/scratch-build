@@ -56,4 +56,7 @@ make install
 ln -sv gcc /tools/bin/cc
 rm -rvf $name-$version
 touch $checkfile
+else
+        echo "$name - Already installed - skipping"
+
 fi

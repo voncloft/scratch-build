@@ -27,4 +27,7 @@ make -C ld LIB_PATH=/usr/lib:/lib:/usr/lib32:/lib32
 cp -v ld/ld-new /tools/bin
 
 touch $checkfile
+else
+        echo "$name - Already installed - skipping"
+
 fi
