@@ -1,5 +1,5 @@
 name=linux
-version=5.10.17
+version=5.11.16
 step=02
 checkfile=/logs/$step-$name-$version
 
@@ -9,8 +9,11 @@ cd /mnt/lfs/sources
 tar xvf $name-$version.*.*
 cd $name-$version
 make mrproper
-make INSTALL_HDR_PATH=dest headers_install
-cp -rv dest/include/* /tools/include
+make headers
+find usr/include -name '.*' -delete
+rm usr/include/Makefile
+cp -rv usr/include $LFS/usr
+
 
 rm -rfv /mnt/lfs/sources/$name-$version
 touch $checkfile

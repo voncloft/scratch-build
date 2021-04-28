@@ -4,6 +4,7 @@ install multilib-gcc on host
 	glibc6-dev
 	binutils-dev
 	libstdc++-10-dev
+	gcc-i386-linux-gnu
 I used the 8.4 lfs layout to install packages while using the most up to date packages of of 4/27/21
 
 
