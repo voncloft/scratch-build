@@ -51,8 +51,11 @@ make
 make DESTDIR=$PWD/DESTDIR install
 cp -a DESTDIR/lib32/*     $LFS/lib32/
 cp -a DESTDIR/usr/lib32 $LFS/usr/
-###need to fix
-install -vm644 DESTDIR/usr/include/gnu/{lib-names,stubs}-32.h \
+###should work
+install -vm644 DESTDIR/usr/include/gnu/stubs-x32.h \
+      $LFS/usr/include/gnu/
+
+install -vm644 DESTDIR/usr/include/gnu/lib-names-x32.h \
                $LFS/usr/include/gnu/
 ln -svf ../lib32/ld-linux.so.2 $LFS/lib/ld-linux.so.2
 
@@ -77,14 +80,13 @@ make
 make DESTDIR=$PWD/DESTDIR install
 cp -a DESTDIR/libx32/*     $LFS/libx32/
 cp -a DESTDIR/usr/libx32 $LFS/usr/
-###need to fix
-install -vm644 DESTDIR/usr/include/gnu/{lib-names,stubs}-x32.h \
+###whould work
+install -vm644 DESTDIR/usr/include/gnu/stubs-x32.h \
+               $LFS/usr/include/gnu/
+
+install -vm644 DESTDIR/usr/include/gnu/lib-names-x32.h \
                $LFS/usr/include/gnu/
 ln -svf ../libx32/ld-linux-x32.so.2 $LFS/lib/ld-linux-x32.so.2
-
-
-
-
 
 rm -rfv /mnt/lfs/sources/$name-$version
 touch $checkfile
