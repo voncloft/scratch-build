@@ -16,9 +16,13 @@ mkdir -v $LFS/sources
 chmod -v a+wt $LFS/sources
 wget --input-file=files/wget-list --continue --directory-prefix=$LFS/sources
 
-echo "Creating tools directory"
-mkdir -v $LFS/tools
-ln -sv $LFS/tools /
+echo "Creating filesystem"
+mkdir -pv $LFS/{bin,etc,lib,sbin,usr,var}
+case $(uname -m) in
+  x86_64) mkdir -pv $LFS/lib64 ;;
+esac
+kdir -pv $LFS/lib{,x}32
+mkdir -pv $LFS/tools
 
 echo "Creating lfs user"
 groupadd lfs
@@ -26,6 +30,12 @@ useradd -s /bin/bash -g lfs -m -k /dev/null lfs
 
 ###Find way to passwd lfs
 #passwd lfs
+chown -v lfs $LFS/{usr,lib,var,etc,bin,sbin,tools}
+case $(uname -m) in
+  x86_64) chown -v lfs $LFS/lib64 ;;
+esac
+chown -v lfs $LFS/{lib32,libx32}
+
 mkdir -pv /logs
 chown -v lfs /logs
 chmod 777 /logs
