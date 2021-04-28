@@ -21,7 +21,7 @@ mkdir -pv $LFS/{bin,etc,lib,sbin,usr,var}
 case $(uname -m) in
   x86_64) mkdir -pv $LFS/lib64 ;;
 esac
-kdir -pv $LFS/lib{,x}32
+mkdir -pv $LFS/lib{,x}32
 mkdir -pv $LFS/tools
 
 echo "Creating lfs user"
