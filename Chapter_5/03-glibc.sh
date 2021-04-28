@@ -1,5 +1,6 @@
 name=glibc
 version=2.33
+gcc)version=10.2.0
 step=03
 checkfile=/logs/$step-$name-$version
 if [ ! -f $checkfile ];
@@ -11,7 +12,7 @@ cd $name-$version
 ln -sfv ../lib/ld-linux-x86-64.so.2 $LFS/lib64
 ln -sfv ../lib/ld-linux-x86-64.so.2 $LFS/lib64/ld-lsb-x86-64.so.3
 
-patch -Np1 -i ../glibc-2.33-fhs-1.patch
+patch -Np1 -i ../glibc-$version-fhs-1.patch
 mkdir -v build
 cd       build
 ../configure                             \
@@ -28,7 +29,7 @@ cd       build
 
 make
 make DESTDIR=$LFS install
-$LFS/tools/libexec/gcc/$LFS_TGT/10.2.0/install-tools/mkheaders
+$LFS/tools/libexec/gcc/$LFS_TGT/$gcc_version/install-tools/mkheaders
 
 make clean
 find .. -name "*.a" -delete
@@ -50,6 +51,7 @@ make
 make DESTDIR=$PWD/DESTDIR install
 cp -a DESTDIR/lib32/*     $LFS/lib32/
 cp -a DESTDIR/usr/lib32 $LFS/usr/
+###need to fix
 install -vm644 DESTDIR/usr/include/gnu/{lib-names,stubs}-32.h \
                $LFS/usr/include/gnu/
 ln -svf ../lib32/ld-linux.so.2 $LFS/lib/ld-linux.so.2
@@ -75,6 +77,7 @@ make
 make DESTDIR=$PWD/DESTDIR install
 cp -a DESTDIR/libx32/*     $LFS/libx32/
 cp -a DESTDIR/usr/libx32 $LFS/usr/
+###need to fix
 install -vm644 DESTDIR/usr/include/gnu/{lib-names,stubs}-x32.h \
                $LFS/usr/include/gnu/
 ln -svf ../libx32/ld-linux-x32.so.2 $LFS/lib/ld-linux-x32.so.2
